@@ -1,0 +1,70 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\SUPORTE EVOLUCAO 1\\Desktop\\POO\\BDtrabalhoAluno\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F54EBD1F-A957-452B-A237-1E68222F67E8}|BDtrabalhoFuncionario.csproj|c:\\users\\suporte evolucao 1\\desktop\\poo\\bdtrabalhoaluno\\mapeamento\\funcionario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F54EBD1F-A957-452B-A237-1E68222F67E8}|BDtrabalhoFuncionario.csproj|solutionrelative:mapeamento\\funcionario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F54EBD1F-A957-452B-A237-1E68222F67E8}|BDtrabalhoAluno.csproj|c:\\users\\suporte evolucao 1\\desktop\\poo\\bdtrabalhoaluno\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F54EBD1F-A957-452B-A237-1E68222F67E8}|BDtrabalhoAluno.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F54EBD1F-A957-452B-A237-1E68222F67E8}|BDtrabalhoAluno.csproj|c:\\users\\suporte evolucao 1\\desktop\\poo\\bdtrabalhoaluno\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F54EBD1F-A957-452B-A237-1E68222F67E8}|BDtrabalhoAluno.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Funcionario.cs",
+              "DocumentMoniker": "C:\\Users\\SUPORTE EVOLUCAO 1\\Desktop\\POO\\BDtrabalhoAluno\\mapeamento\\Funcionario.cs",
+              "RelativeDocumentMoniker": "mapeamento\\Funcionario.cs",
+              "ToolTip": "C:\\Users\\SUPORTE EVOLUCAO 1\\Desktop\\POO\\BDtrabalhoAluno\\mapeamento\\Funcionario.cs",
+              "RelativeToolTip": "mapeamento\\Funcionario.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-26T13:18:27.022Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\SUPORTE EVOLUCAO 1\\Desktop\\POO\\BDtrabalhoAluno\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\SUPORTE EVOLUCAO 1\\Desktop\\POO\\BDtrabalhoAluno\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-26T12:12:50.12Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\SUPORTE EVOLUCAO 1\\Desktop\\POO\\BDtrabalhoAluno\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "C:\\Users\\SUPORTE EVOLUCAO 1\\Desktop\\POO\\BDtrabalhoAluno\\Form1.cs [Projeto]",
+              "RelativeToolTip": "Form1.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-26T12:12:24.548Z",
+              "EditorCaption": " [Projeto]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
