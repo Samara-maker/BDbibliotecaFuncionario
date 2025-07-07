@@ -39,216 +39,229 @@
             label9 = new Label();
             label10 = new Label();
             textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            comboBox1 = new ComboBox();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
-            textBox5 = new TextBox();
-            comboBox2 = new ComboBox();
-            button1 = new Button();
-            button2 = new Button();
-            dateTimePicker2 = new DateTimePicker();
-            dateTimePicker1 = new DateTimePicker();
-            dateTimePicker3 = new DateTimePicker();
+            tbNome = new TextBox();
+            cbSexo = new ComboBox();
+            tbCpf = new TextBox();
+            tbTelefone = new TextBox();
+            tbemail = new TextBox();
+            cbCargo = new ComboBox();
+            btCancelar = new Button();
+            btGravar = new Button();
+            dtAdmissao = new DateTimePicker();
+            dtDataNasc = new DateTimePicker();
+            dtDemissao = new DateTimePicker();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(26, 31);
+            label1.Location = new Point(30, 41);
             label1.Name = "label1";
-            label1.Size = new Size(46, 15);
+            label1.Size = new Size(58, 20);
             label1.TabIndex = 0;
             label1.Text = "Código";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(111, 31);
+            label2.Location = new Point(127, 41);
             label2.Name = "label2";
-            label2.Size = new Size(40, 15);
+            label2.Size = new Size(50, 20);
             label2.TabIndex = 1;
             label2.Text = "Nome";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(315, 31);
+            label3.Location = new Point(360, 41);
             label3.Name = "label3";
-            label3.Size = new Size(98, 15);
+            label3.Size = new Size(124, 20);
             label3.TabIndex = 2;
             label3.Text = "Data Nascimento";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(586, 31);
+            label4.Location = new Point(670, 41);
             label4.Name = "label4";
-            label4.Size = new Size(32, 15);
+            label4.Size = new Size(41, 20);
             label4.TabIndex = 3;
             label4.Text = "Sexo";
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(26, 123);
+            label5.Location = new Point(30, 164);
             label5.Name = "label5";
-            label5.Size = new Size(28, 15);
+            label5.Size = new Size(33, 20);
             label5.TabIndex = 4;
             label5.Text = "CPF";
             // 
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(191, 123);
+            label6.Location = new Point(218, 164);
             label6.Name = "label6";
-            label6.Size = new Size(51, 15);
+            label6.Size = new Size(66, 20);
             label6.TabIndex = 5;
             label6.Text = "Telefone";
             // 
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(380, 123);
+            label7.Location = new Point(434, 164);
             label7.Name = "label7";
-            label7.Size = new Size(39, 15);
+            label7.Size = new Size(49, 20);
             label7.TabIndex = 6;
             label7.Text = "Cargo";
             // 
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(553, 123);
+            label8.Location = new Point(632, 164);
             label8.Name = "label8";
-            label8.Size = new Size(36, 15);
+            label8.Size = new Size(46, 20);
             label8.TabIndex = 7;
             label8.Text = "Email";
             // 
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(31, 203);
+            label9.Location = new Point(35, 271);
             label9.Name = "label9";
-            label9.Size = new Size(59, 15);
+            label9.Size = new Size(74, 20);
             label9.TabIndex = 8;
             label9.Text = "Admissão";
             // 
             // label10
             // 
             label10.AutoSize = true;
-            label10.Location = new Point(340, 203);
+            label10.Location = new Point(389, 271);
             label10.Name = "label10";
-            label10.Size = new Size(58, 15);
+            label10.Size = new Size(74, 20);
             label10.TabIndex = 9;
             label10.Text = "Demissão";
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(27, 50);
+            textBox1.Location = new Point(31, 67);
+            textBox1.Margin = new Padding(3, 4, 3, 4);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(46, 23);
+            textBox1.Size = new Size(52, 27);
             textBox1.TabIndex = 10;
             // 
-            // textBox2
+            // tbNome
             // 
-            textBox2.Location = new Point(111, 49);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(183, 23);
-            textBox2.TabIndex = 11;
+            tbNome.Location = new Point(127, 65);
+            tbNome.Margin = new Padding(3, 4, 3, 4);
+            tbNome.Name = "tbNome";
+            tbNome.Size = new Size(209, 27);
+            tbNome.TabIndex = 11;
             // 
-            // comboBox1
+            // cbSexo
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(586, 49);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(121, 23);
-            comboBox1.TabIndex = 13;
-            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
+            cbSexo.FormattingEnabled = true;
+            cbSexo.Location = new Point(670, 65);
+            cbSexo.Margin = new Padding(3, 4, 3, 4);
+            cbSexo.Name = "cbSexo";
+            cbSexo.Size = new Size(138, 28);
+            cbSexo.TabIndex = 13;
+            cbSexo.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
-            // textBox3
+            // tbCpf
             // 
-            textBox3.Location = new Point(26, 141);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(133, 23);
-            textBox3.TabIndex = 14;
+            tbCpf.Location = new Point(30, 188);
+            tbCpf.Margin = new Padding(3, 4, 3, 4);
+            tbCpf.Name = "tbCpf";
+            tbCpf.Size = new Size(151, 27);
+            tbCpf.TabIndex = 14;
             // 
-            // textBox4
+            // tbTelefone
             // 
-            textBox4.Location = new Point(191, 141);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(152, 23);
-            textBox4.TabIndex = 15;
+            tbTelefone.Location = new Point(218, 188);
+            tbTelefone.Margin = new Padding(3, 4, 3, 4);
+            tbTelefone.Name = "tbTelefone";
+            tbTelefone.Size = new Size(173, 27);
+            tbTelefone.TabIndex = 15;
             // 
-            // textBox5
+            // tbemail
             // 
-            textBox5.Location = new Point(553, 141);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(183, 23);
-            textBox5.TabIndex = 16;
+            tbemail.Location = new Point(632, 188);
+            tbemail.Margin = new Padding(3, 4, 3, 4);
+            tbemail.Name = "tbemail";
+            tbemail.Size = new Size(209, 27);
+            tbemail.TabIndex = 16;
             // 
-            // comboBox2
+            // cbCargo
             // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(380, 141);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(140, 23);
-            comboBox2.TabIndex = 17;
+            cbCargo.FormattingEnabled = true;
+            cbCargo.Location = new Point(434, 188);
+            cbCargo.Margin = new Padding(3, 4, 3, 4);
+            cbCargo.Name = "cbCargo";
+            cbCargo.Size = new Size(159, 28);
+            cbCargo.TabIndex = 17;
             // 
-            // button1
+            // btCancelar
             // 
-            button1.Location = new Point(586, 298);
-            button1.Name = "button1";
-            button1.Size = new Size(105, 51);
-            button1.TabIndex = 18;
-            button1.Text = "CANCELAR";
-            button1.UseVisualStyleBackColor = true;
+            btCancelar.Location = new Point(670, 397);
+            btCancelar.Margin = new Padding(3, 4, 3, 4);
+            btCancelar.Name = "btCancelar";
+            btCancelar.Size = new Size(120, 68);
+            btCancelar.TabIndex = 18;
+            btCancelar.Text = "CANCELAR";
+            btCancelar.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btGravar
             // 
-            button2.Location = new Point(442, 298);
-            button2.Name = "button2";
-            button2.Size = new Size(105, 51);
-            button2.TabIndex = 19;
-            button2.Text = "GRAVAR";
-            button2.UseVisualStyleBackColor = true;
+            btGravar.Location = new Point(505, 397);
+            btGravar.Margin = new Padding(3, 4, 3, 4);
+            btGravar.Name = "btGravar";
+            btGravar.Size = new Size(120, 68);
+            btGravar.TabIndex = 19;
+            btGravar.Text = "GRAVAR";
+            btGravar.UseVisualStyleBackColor = true;
+            btGravar.Click += btGravar_Click;
             // 
-            // dateTimePicker2
+            // dtAdmissao
             // 
-            dateTimePicker2.Location = new Point(31, 221);
-            dateTimePicker2.Name = "dateTimePicker2";
-            dateTimePicker2.Size = new Size(245, 23);
-            dateTimePicker2.TabIndex = 20;
+            dtAdmissao.Location = new Point(35, 295);
+            dtAdmissao.Margin = new Padding(3, 4, 3, 4);
+            dtAdmissao.Name = "dtAdmissao";
+            dtAdmissao.Size = new Size(279, 27);
+            dtAdmissao.TabIndex = 20;
             // 
-            // dateTimePicker1
+            // dtDataNasc
             // 
-            dateTimePicker1.Location = new Point(315, 50);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(245, 23);
-            dateTimePicker1.TabIndex = 21;
+            dtDataNasc.Location = new Point(360, 67);
+            dtDataNasc.Margin = new Padding(3, 4, 3, 4);
+            dtDataNasc.Name = "dtDataNasc";
+            dtDataNasc.Size = new Size(279, 27);
+            dtDataNasc.TabIndex = 21;
             // 
-            // dateTimePicker3
+            // dtDemissao
             // 
-            dateTimePicker3.Location = new Point(340, 221);
-            dateTimePicker3.Name = "dateTimePicker3";
-            dateTimePicker3.Size = new Size(245, 23);
-            dateTimePicker3.TabIndex = 22;
+            dtDemissao.Location = new Point(389, 295);
+            dtDemissao.Margin = new Padding(3, 4, 3, 4);
+            dtDemissao.Name = "dtDemissao";
+            dtDemissao.Size = new Size(279, 27);
+            dtDemissao.TabIndex = 22;
             // 
             // NovoFuncionario
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(750, 372);
-            Controls.Add(dateTimePicker3);
-            Controls.Add(dateTimePicker1);
-            Controls.Add(dateTimePicker2);
-            Controls.Add(button2);
-            Controls.Add(button1);
-            Controls.Add(comboBox2);
-            Controls.Add(textBox5);
-            Controls.Add(textBox4);
-            Controls.Add(textBox3);
-            Controls.Add(comboBox1);
-            Controls.Add(textBox2);
+            ClientSize = new Size(857, 496);
+            Controls.Add(dtDemissao);
+            Controls.Add(dtDataNasc);
+            Controls.Add(dtAdmissao);
+            Controls.Add(btGravar);
+            Controls.Add(btCancelar);
+            Controls.Add(cbCargo);
+            Controls.Add(tbemail);
+            Controls.Add(tbTelefone);
+            Controls.Add(tbCpf);
+            Controls.Add(cbSexo);
+            Controls.Add(tbNome);
             Controls.Add(textBox1);
             Controls.Add(label10);
             Controls.Add(label9);
@@ -260,6 +273,7 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "NovoFuncionario";
             Text = "NovoFuncionario";
             ResumeLayout(false);
@@ -279,16 +293,16 @@
         private Label label9;
         private Label label10;
         private TextBox textBox1;
-        private TextBox textBox2;
-        private ComboBox comboBox1;
-        private TextBox textBox3;
-        private TextBox textBox4;
-        private TextBox textBox5;
-        private ComboBox comboBox2;
-        private Button button1;
-        private Button button2;
-        private DateTimePicker dateTimePicker2;
-        private DateTimePicker dateTimePicker1;
-        private DateTimePicker dateTimePicker3;
+        private TextBox tbNome;
+        private ComboBox cbSexo;
+        private TextBox tbCpf;
+        private TextBox tbTelefone;
+        private TextBox tbemail;
+        private ComboBox cbCargo;
+        private Button btCancelar;
+        private Button btGravar;
+        private DateTimePicker dtAdmissao;
+        private DateTimePicker dtDataNasc;
+        private DateTimePicker dtDemissao;
     }
 }
