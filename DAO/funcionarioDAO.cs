@@ -10,7 +10,7 @@ using BDtrabalhoFuncionario.conexao;
 
 namespace BDtrabalhoFuncionario.DAO
 {
-    internal class FuncionarioDAO
+    public class FuncionarioDAO
     {
         public void Cadastrar(Funcionario f)
         {
@@ -29,7 +29,8 @@ namespace BDtrabalhoFuncionario.DAO
                 cmd.Parameters.AddWithValue("@email", f.email);
                 cmd.Parameters.AddWithValue("@cargo", f.cargo);
                 cmd.Parameters.AddWithValue("@dataAdmissao", f.dataAdmissao.ToString("yyyy-MM-dd"));
-                cmd.Parameters.AddWithValue("@dataDemissao", f.dataDemissao.ToString("yyyy-MM-dd"));
+                cmd.Parameters.AddWithValue("@dataDemissao", f.dataDemissao);
+
 
                 cmd.ExecuteNonQuery();
                 Conexao.FecharConexao();
@@ -44,7 +45,7 @@ namespace BDtrabalhoFuncionario.DAO
         {
             try
             {
-                string sql = "UPDATE funcionario SET nome=@nome, sexo=@sexo, DataNascimento=@DataNascimento, CPF=@CPF, telefone=@telefone, email=@email, cargo=@cargo, DataAdmissao=@DataAdmissao, DataDemissao=@DataDemissao WHERE id=@id";
+                string sql = "UPDATE funcionario SET nome=@nome, sexo=@sexo, dataNasc=@dataNasc, cpf=@cpf, telefone=@telefone, email=@email, cargo=@cargo, dataAdmissao=@dataAdmissao, dataDemissao=@dataDemissao WHERE id_func=@id_func";
 
                 var cmd = new MySqlCommand(sql, Conexao.Conectar());
 
@@ -56,8 +57,9 @@ namespace BDtrabalhoFuncionario.DAO
                 cmd.Parameters.AddWithValue("@email", f.email);
                 cmd.Parameters.AddWithValue("@cargo", f.cargo);
                 cmd.Parameters.AddWithValue("@dataAdmissao", f.dataAdmissao.ToString("yyyy-MM-dd"));
-                cmd.Parameters.AddWithValue("@DataDemissao", f.dataDemissao.ToString("yyyy-MM-dd"));
-                cmd.Parameters.AddWithValue("@id", f.id_func);
+                cmd.Parameters.AddWithValue("@dataDemissao", string.IsNullOrEmpty(f.dataDemissao) ? DBNull.Value : f.dataDemissao);
+
+                cmd.Parameters.AddWithValue("@id_func", f.id_func);
 
                 cmd.ExecuteNonQuery();
                 Conexao.FecharConexao();
@@ -72,10 +74,10 @@ namespace BDtrabalhoFuncionario.DAO
         {
             try
             {
-                string sql = "DELETE FROM funcionario WHERE id=@id";
+                string sql = "DELETE FROM funcionario WHERE id_func=@id_func";
 
                 var cmd = new MySqlCommand(sql, Conexao.Conectar());
-                cmd.Parameters.AddWithValue("@id", f.id_func);
+                cmd.Parameters.AddWithValue("@id_func", f.id_func);
 
                 cmd.ExecuteNonQuery();
                 Conexao.FecharConexao();
@@ -109,7 +111,7 @@ namespace BDtrabalhoFuncionario.DAO
                         f.email = dr.GetString("email");
                         f.cargo = dr.GetString("cargo");
                         f.dataAdmissao = DateOnly.FromDateTime(dr.GetDateTime("dataAdmissao"));
-                        f.dataDemissao = DateOnly.FromDateTime(dr.GetDateTime("dataDemissao"));
+                        f.dataDemissao = dr["dataDemissao"] != DBNull.Value ? dr["dataDemissao"].ToString() : null;
 
                         lista.Add(f);
                     }
@@ -123,5 +125,6 @@ namespace BDtrabalhoFuncionario.DAO
                 throw new Exception("Erro ao buscar funcionários: " + ex.Message);
             }
         }
+
     }
 }

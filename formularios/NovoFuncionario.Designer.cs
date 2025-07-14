@@ -49,7 +49,7 @@
             btGravar = new Button();
             dtAdmissao = new DateTimePicker();
             dtDataNasc = new DateTimePicker();
-            dtDemissao = new DateTimePicker();
+            dataDemissao = new TextBox();
             SuspendLayout();
             // 
             // label1
@@ -144,6 +144,7 @@
             // 
             // textBox1
             // 
+            textBox1.Enabled = false;
             textBox1.Location = new Point(31, 67);
             textBox1.Margin = new Padding(3, 4, 3, 4);
             textBox1.Name = "textBox1";
@@ -166,7 +167,6 @@
             cbSexo.Name = "cbSexo";
             cbSexo.Size = new Size(138, 28);
             cbSexo.TabIndex = 13;
-            cbSexo.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // tbCpf
             // 
@@ -238,20 +238,21 @@
             dtDataNasc.Size = new Size(279, 27);
             dtDataNasc.TabIndex = 21;
             // 
-            // dtDemissao
+            // dataDemissao
             // 
-            dtDemissao.Location = new Point(389, 295);
-            dtDemissao.Margin = new Padding(3, 4, 3, 4);
-            dtDemissao.Name = "dtDemissao";
-            dtDemissao.Size = new Size(279, 27);
-            dtDemissao.TabIndex = 22;
+            dataDemissao.Enabled = false;
+            dataDemissao.Location = new Point(389, 297);
+            dataDemissao.Margin = new Padding(3, 4, 3, 4);
+            dataDemissao.Name = "dataDemissao";
+            dataDemissao.Size = new Size(173, 27);
+            dataDemissao.TabIndex = 22;
             // 
             // NovoFuncionario
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(857, 496);
-            Controls.Add(dtDemissao);
+            Controls.Add(dataDemissao);
             Controls.Add(dtDataNasc);
             Controls.Add(dtAdmissao);
             Controls.Add(btGravar);
@@ -276,6 +277,7 @@
             Margin = new Padding(3, 4, 3, 4);
             Name = "NovoFuncionario";
             Text = "NovoFuncionario";
+            Load += NovoFuncionario_Load_1;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -303,6 +305,6 @@
         private Button btGravar;
         private DateTimePicker dtAdmissao;
         private DateTimePicker dtDataNasc;
-        private DateTimePicker dtDemissao;
+        private TextBox dataDemissao;
     }
 }

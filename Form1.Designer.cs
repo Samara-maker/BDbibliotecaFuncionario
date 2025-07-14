@@ -29,26 +29,17 @@
         private void InitializeComponent()
         {
             button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
-            button4 = new Button();
+            btEditar = new Button();
+            btDeletar = new Button();
+            btSair = new Button();
             textBox1 = new TextBox();
             button5 = new Button();
             button6 = new Button();
             label1 = new Label();
-            dataGridView1 = new DataGridView();
-            Código = new DataGridViewTextBoxColumn();
-            Nome = new DataGridViewTextBoxColumn();
-            sexo = new DataGridViewTextBoxColumn();
-            dataNasc = new DataGridViewTextBoxColumn();
-            cpf = new DataGridViewTextBoxColumn();
-            telefone = new DataGridViewTextBoxColumn();
-            email = new DataGridViewTextBoxColumn();
-            cargo = new DataGridViewTextBoxColumn();
-            dataAdmissao = new DataGridViewTextBoxColumn();
+            dgvFuncionario = new DataGridView();
             comboBox1 = new ComboBox();
             label2 = new Label();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvFuncionario).BeginInit();
             SuspendLayout();
             // 
             // button1
@@ -62,35 +53,38 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
-            // button2
+            // btEditar
             // 
-            button2.Location = new Point(373, 616);
-            button2.Margin = new Padding(3, 4, 3, 4);
-            button2.Name = "button2";
-            button2.Size = new Size(126, 79);
-            button2.TabIndex = 1;
-            button2.Text = "EDITAR";
-            button2.UseVisualStyleBackColor = true;
+            btEditar.Location = new Point(373, 616);
+            btEditar.Margin = new Padding(3, 4, 3, 4);
+            btEditar.Name = "btEditar";
+            btEditar.Size = new Size(126, 79);
+            btEditar.TabIndex = 1;
+            btEditar.Text = "EDITAR";
+            btEditar.UseVisualStyleBackColor = true;
+            btEditar.Click += btEditar_Click;
             // 
-            // button3
+            // btDeletar
             // 
-            button3.Location = new Point(633, 619);
-            button3.Margin = new Padding(3, 4, 3, 4);
-            button3.Name = "button3";
-            button3.Size = new Size(128, 79);
-            button3.TabIndex = 2;
-            button3.Text = "DELETAR";
-            button3.UseVisualStyleBackColor = true;
+            btDeletar.Location = new Point(633, 619);
+            btDeletar.Margin = new Padding(3, 4, 3, 4);
+            btDeletar.Name = "btDeletar";
+            btDeletar.Size = new Size(128, 79);
+            btDeletar.TabIndex = 2;
+            btDeletar.Text = "DELETAR";
+            btDeletar.UseVisualStyleBackColor = true;
+            btDeletar.Click += btDeletar_Click;
             // 
-            // button4
+            // btSair
             // 
-            button4.Location = new Point(854, 616);
-            button4.Margin = new Padding(3, 4, 3, 4);
-            button4.Name = "button4";
-            button4.Size = new Size(131, 79);
-            button4.TabIndex = 3;
-            button4.Text = "SAIR";
-            button4.UseVisualStyleBackColor = true;
+            btSair.Location = new Point(854, 616);
+            btSair.Margin = new Padding(3, 4, 3, 4);
+            btSair.Name = "btSair";
+            btSair.Size = new Size(131, 79);
+            btSair.TabIndex = 3;
+            btSair.Text = "SAIR";
+            btSair.UseVisualStyleBackColor = true;
+            btSair.Click += btSair_Click;
             // 
             // textBox1
             // 
@@ -129,79 +123,15 @@
             label1.TabIndex = 7;
             label1.Text = "Localizar";
             // 
-            // dataGridView1
+            // dgvFuncionario
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Código, Nome, sexo, dataNasc, cpf, telefone, email, cargo, dataAdmissao });
-            dataGridView1.Location = new Point(31, 135);
-            dataGridView1.Margin = new Padding(3, 4, 3, 4);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(1109, 445);
-            dataGridView1.TabIndex = 8;
-            // 
-            // Código
-            // 
-            Código.HeaderText = "Código";
-            Código.MinimumWidth = 6;
-            Código.Name = "Código";
-            Código.Width = 125;
-            // 
-            // Nome
-            // 
-            Nome.HeaderText = "Nome";
-            Nome.MinimumWidth = 6;
-            Nome.Name = "Nome";
-            Nome.Width = 125;
-            // 
-            // sexo
-            // 
-            sexo.HeaderText = "Sexo";
-            sexo.MinimumWidth = 6;
-            sexo.Name = "sexo";
-            sexo.Width = 125;
-            // 
-            // dataNasc
-            // 
-            dataNasc.HeaderText = "Data Nascimento";
-            dataNasc.MinimumWidth = 6;
-            dataNasc.Name = "dataNasc";
-            dataNasc.Width = 125;
-            // 
-            // cpf
-            // 
-            cpf.HeaderText = "CPF";
-            cpf.MinimumWidth = 6;
-            cpf.Name = "cpf";
-            cpf.Width = 125;
-            // 
-            // telefone
-            // 
-            telefone.HeaderText = "Telefone";
-            telefone.MinimumWidth = 6;
-            telefone.Name = "telefone";
-            telefone.Width = 125;
-            // 
-            // email
-            // 
-            email.HeaderText = "Email";
-            email.MinimumWidth = 6;
-            email.Name = "email";
-            email.Width = 125;
-            // 
-            // cargo
-            // 
-            cargo.HeaderText = "Cargo";
-            cargo.MinimumWidth = 6;
-            cargo.Name = "cargo";
-            cargo.Width = 125;
-            // 
-            // dataAdmissao
-            // 
-            dataAdmissao.HeaderText = "Data Admissão";
-            dataAdmissao.MinimumWidth = 6;
-            dataAdmissao.Name = "dataAdmissao";
-            dataAdmissao.Width = 125;
+            dgvFuncionario.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvFuncionario.Location = new Point(31, 135);
+            dgvFuncionario.Margin = new Padding(3, 4, 3, 4);
+            dgvFuncionario.Name = "dgvFuncionario";
+            dgvFuncionario.RowHeadersWidth = 51;
+            dgvFuncionario.Size = new Size(1109, 445);
+            dgvFuncionario.TabIndex = 8;
             // 
             // comboBox1
             // 
@@ -212,7 +142,6 @@
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(98, 28);
             comboBox1.TabIndex = 9;
-            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // label2
             // 
@@ -230,20 +159,20 @@
             ClientSize = new Size(1168, 764);
             Controls.Add(label2);
             Controls.Add(comboBox1);
-            Controls.Add(dataGridView1);
+            Controls.Add(dgvFuncionario);
             Controls.Add(label1);
             Controls.Add(button6);
             Controls.Add(button5);
             Controls.Add(textBox1);
-            Controls.Add(button4);
-            Controls.Add(button3);
-            Controls.Add(button2);
+            Controls.Add(btSair);
+            Controls.Add(btDeletar);
+            Controls.Add(btEditar);
             Controls.Add(button1);
             Margin = new Padding(3, 4, 3, 4);
             Name = "Form1";
             Text = "Form1";
             Load += Form1_Load;
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvFuncionario).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -251,24 +180,15 @@
         #endregion
 
         private Button button1;
-        private Button button2;
-        private Button button3;
-        private Button button4;
+        private Button btEditar;
+        private Button btDeletar;
+        private Button btSair;
         private TextBox textBox1;
         private Button button5;
         private Button button6;
         private Label label1;
-        private DataGridView dataGridView1;
+        private DataGridView dgvFuncionario;
         private ComboBox comboBox1;
         private Label label2;
-        private DataGridViewTextBoxColumn Código;
-        private DataGridViewTextBoxColumn Nome;
-        private DataGridViewTextBoxColumn sexo;
-        private DataGridViewTextBoxColumn dataNasc;
-        private DataGridViewTextBoxColumn cpf;
-        private DataGridViewTextBoxColumn telefone;
-        private DataGridViewTextBoxColumn email;
-        private DataGridViewTextBoxColumn cargo;
-        private DataGridViewTextBoxColumn dataAdmissao;
     }
 }
