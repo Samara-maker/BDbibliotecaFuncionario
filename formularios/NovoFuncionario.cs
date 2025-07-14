@@ -18,7 +18,7 @@ namespace BDtrabalhoFuncionario.formularios
         public NovoFuncionario(Funcionario f) : this()
         {
             funcionarioEditando = f;
-
+            id_func.Text = f.id_func.ToString();
             tbNome.Text = f.nome;
             cbSexo.Text = f.sexo;
             tbCpf.Text = f.cpf;
@@ -55,7 +55,6 @@ namespace BDtrabalhoFuncionario.formularios
                     cargo = cbCargo.Text,
                     dataAdmissao = DateOnly.FromDateTime(dtAdmissao.Value),
                     dataDemissao = dataDemissao.Text,
-
                 };
 
                 FuncionarioDAO dao = new FuncionarioDAO();
@@ -68,8 +67,11 @@ namespace BDtrabalhoFuncionario.formularios
                 }
                 else
                 {
-                    dao.Cadastrar(funcionario);
-                    MessageBox.Show("Funcionário cadastrado com sucesso!");
+                    int idGerado = dao.Cadastrar(funcionario);
+                    id_func.Text = idGerado.ToString();  // Mostra ID no campo Código
+                    id_func.Enabled = false;
+
+                    MessageBox.Show("Funcionário cadastrado com sucesso! ID gerado: " + idGerado);
                 }
 
                 this.DialogResult = DialogResult.OK;
@@ -81,9 +83,21 @@ namespace BDtrabalhoFuncionario.formularios
             }
         }
 
+
         private void NovoFuncionario_Load_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void btCancelar_Click(object sender, EventArgs e)
+        {
+            var resultado = MessageBox.Show("Tem certeza que deseja cancelar? As alterações serão perdidas.","Confirmar Cancelamento", MessageBoxButtons.YesNo,MessageBoxIcon.Question);
+
+            if (resultado == DialogResult.Yes)
+            {
+                this.DialogResult = DialogResult.Cancel;
+                this.Close();
+            }
         }
     }
 }

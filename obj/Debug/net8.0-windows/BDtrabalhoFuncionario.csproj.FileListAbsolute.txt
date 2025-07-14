@@ -63,7 +63,6 @@ C:\Users\samar\OneDrive\Documentos\POOFUN\BDtrabalhoFuncionario\bin\Debug\net8.0
 C:\Users\samar\OneDrive\Documentos\POOFUN\BDtrabalhoFuncionario\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Windows.Extensions.dll
 C:\Users\samar\OneDrive\Documentos\POOFUN\BDtrabalhoFuncionario\obj\Debug\net8.0-windows\BDtrabalhoFuncionario.csproj.AssemblyReference.cache
 C:\Users\samar\OneDrive\Documentos\POOFUN\BDtrabalhoFuncionario\obj\Debug\net8.0-windows\BDtrabalhoAluno.Form1.resources
-C:\Users\samar\OneDrive\Documentos\POOFUN\BDtrabalhoFuncionario\obj\Debug\net8.0-windows\BDtrabalhoFuncionario.formularios.EditarFuncionario.resources
 C:\Users\samar\OneDrive\Documentos\POOFUN\BDtrabalhoFuncionario\obj\Debug\net8.0-windows\BDtrabalhoFuncionario.formularios.NovoFuncionario.resources
 C:\Users\samar\OneDrive\Documentos\POOFUN\BDtrabalhoFuncionario\obj\Debug\net8.0-windows\BDtrabalhoFuncionario.csproj.GenerateResource.cache
 C:\Users\samar\OneDrive\Documentos\POOFUN\BDtrabalhoFuncionario\obj\Debug\net8.0-windows\BDtrabalhoFuncionario.GeneratedMSBuildEditorConfig.editorconfig

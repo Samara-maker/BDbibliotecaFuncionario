@@ -38,7 +38,7 @@
             label8 = new Label();
             label9 = new Label();
             label10 = new Label();
-            textBox1 = new TextBox();
+            id_func = new TextBox();
             tbNome = new TextBox();
             cbSexo = new ComboBox();
             tbCpf = new TextBox();
@@ -142,14 +142,15 @@
             label10.TabIndex = 9;
             label10.Text = "Demissão";
             // 
-            // textBox1
+            // id_func
             // 
-            textBox1.Enabled = false;
-            textBox1.Location = new Point(31, 67);
-            textBox1.Margin = new Padding(3, 4, 3, 4);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(52, 27);
-            textBox1.TabIndex = 10;
+            id_func.Enabled = false;
+            id_func.Location = new Point(31, 67);
+            id_func.Margin = new Padding(3, 4, 3, 4);
+            id_func.Name = "id_func";
+            id_func.ReadOnly = true;
+            id_func.Size = new Size(52, 27);
+            id_func.TabIndex = 10;
             // 
             // tbNome
             // 
@@ -210,6 +211,7 @@
             btCancelar.TabIndex = 18;
             btCancelar.Text = "CANCELAR";
             btCancelar.UseVisualStyleBackColor = true;
+            btCancelar.Click += btCancelar_Click;
             // 
             // btGravar
             // 
@@ -263,7 +265,7 @@
             Controls.Add(tbCpf);
             Controls.Add(cbSexo);
             Controls.Add(tbNome);
-            Controls.Add(textBox1);
+            Controls.Add(id_func);
             Controls.Add(label10);
             Controls.Add(label9);
             Controls.Add(label8);
@@ -294,7 +296,7 @@
         private Label label8;
         private Label label9;
         private Label label10;
-        private TextBox textBox1;
+        private TextBox id_func;
         private TextBox tbNome;
         private ComboBox cbSexo;
         private TextBox tbCpf;

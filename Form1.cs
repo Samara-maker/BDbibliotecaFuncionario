@@ -51,7 +51,7 @@ namespace BDtrabalhoAluno
             if (dgvFuncionario.CurrentRow != null)
             {
                 Funcionario f = (Funcionario)dgvFuncionario.CurrentRow.DataBoundItem;
-                var form = new NovoFuncionario(f); 
+                var form = new NovoFuncionario(f);
                 if (form.ShowDialog() == DialogResult.OK)
                 {
                     AtualizarTabela(); // atualiza depois da edição
@@ -85,5 +85,48 @@ namespace BDtrabalhoAluno
         {
             this.Close();
         }
+
+        //ESTE CODIGO ABAIXO ESTÁ FILTRANDO O ID, NOME E CPF, PARA QUE A PESSOA POSSA PROCURAR MELHOR O FUNCIONARIO
+        private void btPesquisar_Click(object sender, EventArgs e)
+        {
+            string campo = "";
+            string valor = txtPesquisar.Text.Trim();
+
+            if (string.IsNullOrEmpty(cbFiltro.Text) || string.IsNullOrEmpty(valor))
+            {
+                MessageBox.Show("Selecione um filtro e insira um valor para pesquisar.");
+                return;
+            }
+
+            switch (cbFiltro.Text)
+            {
+                case "Código":
+                    campo = "id_func";
+                    break;
+                case "Nome":
+                    campo = "nome";
+                    break;
+                case "CPF":
+                    campo = "cpf";
+                    break;
+            }
+
+            try
+            {
+                dgvFuncionario.DataSource = new FuncionarioDAO().BuscarPorFiltro(campo, valor);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao pesquisar: " + ex.Message);
+            }
+        }
+
+        private void btLimpar_Click(object sender, EventArgs e)
+        {
+            cbFiltro.SelectedIndex = 0;
+            txtPesquisar.Clear();
+            AtualizarTabela();
+        }
     }
 }
+

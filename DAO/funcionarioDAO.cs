@@ -12,7 +12,7 @@ namespace BDtrabalhoFuncionario.DAO
 {
     public class FuncionarioDAO
     {
-        public void Cadastrar(Funcionario f)
+        public int Cadastrar(Funcionario f)
         {
             try
             {
@@ -33,7 +33,12 @@ namespace BDtrabalhoFuncionario.DAO
 
 
                 cmd.ExecuteNonQuery();
+                // Recupera o ID gerado automaticamente
+                int idGerado = (int)cmd.LastInsertedId;
+
                 Conexao.FecharConexao();
+
+                return idGerado;
             }
             catch (Exception ex)
             {
@@ -125,6 +130,62 @@ namespace BDtrabalhoFuncionario.DAO
                 throw new Exception("Erro ao buscar funcionários: " + ex.Message);
             }
         }
+
+        public List<Funcionario> BuscarPorFiltro(string campo, string valor)
+        {
+            List<Funcionario> lista = new List<Funcionario>();
+
+            try
+            {
+                string sql;
+                var cmd = new MySqlCommand();
+
+                if (campo == "id_func")  // ID é número, usamos "="
+                {
+                    sql = "SELECT * FROM funcionario WHERE id_func = @valor ORDER BY nome";
+                    cmd.Parameters.AddWithValue("@valor", int.Parse(valor));
+                }
+                else  // nome ou cpf, usamos LIKE
+                {
+                    sql = $"SELECT * FROM funcionario WHERE {campo} LIKE @valor ORDER BY nome";
+                    cmd.Parameters.AddWithValue("@valor", $"%{valor}%");
+                }
+
+                cmd.CommandText = sql;
+                cmd.Connection = Conexao.Conectar();
+
+                using (MySqlDataReader dr = cmd.ExecuteReader())
+                {
+                    while (dr.Read())
+                    {
+                        Funcionario f = new Funcionario
+                        {
+                            id_func = dr.GetInt32("id_func"),
+                            nome = dr.GetString("nome"),
+                            sexo = dr.GetString("sexo"),
+                            dataNasc = DateOnly.FromDateTime(dr.GetDateTime("dataNasc")),
+                            cpf = dr.GetString("cpf"),
+                            telefone = dr.GetString("telefone"),
+                            email = dr.GetString("email"),
+                            cargo = dr.GetString("cargo"),
+                            dataAdmissao = DateOnly.FromDateTime(dr.GetDateTime("dataAdmissao")),
+                            dataDemissao = dr["dataDemissao"] != DBNull.Value ? dr["dataDemissao"].ToString() : null
+                        };
+
+                        lista.Add(f);
+                    }
+                }
+
+                Conexao.FecharConexao();
+                return lista;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Erro ao buscar com filtro: " + ex.Message);
+            }
+        }
+
+
 
     }
 }

@@ -32,12 +32,12 @@
             btEditar = new Button();
             btDeletar = new Button();
             btSair = new Button();
-            textBox1 = new TextBox();
-            button5 = new Button();
-            button6 = new Button();
+            txtPesquisar = new TextBox();
+            btPesquisar = new Button();
+            btLimpar = new Button();
             label1 = new Label();
             dgvFuncionario = new DataGridView();
-            comboBox1 = new ComboBox();
+            cbFiltro = new ComboBox();
             label2 = new Label();
             ((System.ComponentModel.ISupportInitialize)dgvFuncionario).BeginInit();
             SuspendLayout();
@@ -86,33 +86,35 @@
             btSair.UseVisualStyleBackColor = true;
             btSair.Click += btSair_Click;
             // 
-            // textBox1
+            // txtPesquisar
             // 
-            textBox1.Location = new Point(145, 69);
-            textBox1.Margin = new Padding(3, 4, 3, 4);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(235, 27);
-            textBox1.TabIndex = 4;
+            txtPesquisar.Location = new Point(145, 69);
+            txtPesquisar.Margin = new Padding(3, 4, 3, 4);
+            txtPesquisar.Name = "txtPesquisar";
+            txtPesquisar.Size = new Size(235, 27);
+            txtPesquisar.TabIndex = 4;
             // 
-            // button5
+            // btPesquisar
             // 
-            button5.Location = new Point(449, 68);
-            button5.Margin = new Padding(3, 4, 3, 4);
-            button5.Name = "button5";
-            button5.Size = new Size(86, 31);
-            button5.TabIndex = 5;
-            button5.Text = "pesquisar";
-            button5.UseVisualStyleBackColor = true;
+            btPesquisar.Location = new Point(449, 68);
+            btPesquisar.Margin = new Padding(3, 4, 3, 4);
+            btPesquisar.Name = "btPesquisar";
+            btPesquisar.Size = new Size(86, 31);
+            btPesquisar.TabIndex = 5;
+            btPesquisar.Text = "pesquisar";
+            btPesquisar.UseVisualStyleBackColor = true;
+            btPesquisar.Click += btPesquisar_Click;
             // 
-            // button6
+            // btLimpar
             // 
-            button6.Location = new Point(553, 68);
-            button6.Margin = new Padding(3, 4, 3, 4);
-            button6.Name = "button6";
-            button6.Size = new Size(86, 31);
-            button6.TabIndex = 6;
-            button6.Text = "limpar";
-            button6.UseVisualStyleBackColor = true;
+            btLimpar.Location = new Point(553, 68);
+            btLimpar.Margin = new Padding(3, 4, 3, 4);
+            btLimpar.Name = "btLimpar";
+            btLimpar.Size = new Size(86, 31);
+            btLimpar.TabIndex = 6;
+            btLimpar.Text = "limpar";
+            btLimpar.UseVisualStyleBackColor = true;
+            btLimpar.Click += btLimpar_Click;
             // 
             // label1
             // 
@@ -133,15 +135,15 @@
             dgvFuncionario.Size = new Size(1109, 445);
             dgvFuncionario.TabIndex = 8;
             // 
-            // comboBox1
+            // cbFiltro
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Código", "Nome", "CPF" });
-            comboBox1.Location = new Point(40, 69);
-            comboBox1.Margin = new Padding(3, 4, 3, 4);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(98, 28);
-            comboBox1.TabIndex = 9;
+            cbFiltro.FormattingEnabled = true;
+            cbFiltro.Items.AddRange(new object[] { "Código", "Nome", "CPF" });
+            cbFiltro.Location = new Point(40, 69);
+            cbFiltro.Margin = new Padding(3, 4, 3, 4);
+            cbFiltro.Name = "cbFiltro";
+            cbFiltro.Size = new Size(98, 28);
+            cbFiltro.TabIndex = 9;
             // 
             // label2
             // 
@@ -158,12 +160,12 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1168, 764);
             Controls.Add(label2);
-            Controls.Add(comboBox1);
+            Controls.Add(cbFiltro);
             Controls.Add(dgvFuncionario);
             Controls.Add(label1);
-            Controls.Add(button6);
-            Controls.Add(button5);
-            Controls.Add(textBox1);
+            Controls.Add(btLimpar);
+            Controls.Add(btPesquisar);
+            Controls.Add(txtPesquisar);
             Controls.Add(btSair);
             Controls.Add(btDeletar);
             Controls.Add(btEditar);
@@ -183,12 +185,12 @@
         private Button btEditar;
         private Button btDeletar;
         private Button btSair;
-        private TextBox textBox1;
-        private Button button5;
-        private Button button6;
+        private TextBox txtPesquisar;
+        private Button btPesquisar;
+        private Button btLimpar;
         private Label label1;
         private DataGridView dgvFuncionario;
-        private ComboBox comboBox1;
+        private ComboBox cbFiltro;
         private Label label2;
     }
 }
