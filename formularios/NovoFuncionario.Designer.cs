@@ -176,6 +176,7 @@
             tbCpf.Name = "tbCpf";
             tbCpf.Size = new Size(151, 27);
             tbCpf.TabIndex = 14;
+            tbCpf.TextChanged += tbCpf_TextChanged;
             // 
             // tbTelefone
             // 
